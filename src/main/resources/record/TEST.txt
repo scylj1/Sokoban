@@ -1,0 +1,9 @@
+Player: Tom
+Level: 2
+Total moves: 9
+Player: Jack
+Level: 2
+Total moves: 9
+Player: Anna
+Level: 2
+Total moves: 21

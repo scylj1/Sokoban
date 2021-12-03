@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameController.StartController">
+   <children>
+		<ImageView fitHeight="575.0" fitWidth="1044.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@sokoban1.png" /> 
+				<!-- source: https://lh3.googleusercontent.com/hEj8l_3dfhUJQi4Rt0knDNnuHNJ7m3xr4KpWMLuTY2vAwzBV1dLSzCOQz58nko6LKSQ=h900 -->
+			</image>
+		</ImageView>
+      <MenuBar layoutX="578.0" layoutY="318.0" style="-fx-background-color: none; -fx-font-size: 21;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Choose color for WALL ">
+            <items>
+                  <RadioMenuItem fx:id="black" mnemonicParsing="false" onAction="#setWallColor" selected="true" text="Black">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="brown" mnemonicParsing="false" onAction="#setWallColor" text="Brown" toggleGroup="$group" />
+                  <RadioMenuItem fx:id="grey" mnemonicParsing="false" onAction="#setWallColor" text="Grey" toggleGroup="$group" />
+                  <RadioMenuItem fx:id="khaki" mnemonicParsing="false" onAction="#setWallColor" text="Khaki" toggleGroup="$group" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+		<Button fx:id="start" defaultButton="true" layoutX="637.0" layoutY="364.0" mnemonicParsing="false" onAction="#startGame" prefHeight="54.0" prefWidth="180.0" style="-fx-background-color: none;" text="Start" textAlignment="CENTER" textFill="#e80808" underline="true">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
